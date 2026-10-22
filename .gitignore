@@ -1,10 +1,12 @@
 output_/
 day4_fxb_ex/artifacts/
-day4_fxb_ex/Furiosa_FXB_CLI_실습_강사용.md
 benchmark-tool-simple/
-benchmark-tool-simple/vllm-result_old
 benchmark-tool-simple/vllm-result
+# day4_fxb_ex/Furiosa_FXB_CLI_실습_강사용.md
+# benchmark-tool-simple/vllm-result_old
 # Byte-compiled / optimized / DLL files
+
+day5_nup_agent/04_job_support_mission.ipynb
 __pycache__/
 *.py[codz]
 *$py.class

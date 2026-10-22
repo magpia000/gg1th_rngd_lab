@@ -4,13 +4,13 @@ from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_MODEL="gpt-5.4-mini"
 
-# API_KEY = os.getenv("LLM_API_KEY")
-BASE_URL = os.getenv("OPENAI_BASE_URL")
+BASE_URL = os.getenv("MODEL_BASE_URL")
+FURIOSA_MODEL = os.getenv("MODEL_ID", "furiosa-ai/Qwen3-8B-FP8")
 
-MODEL = os.getenv("MODEL_ID", "gpt-4o-mini")
 TEMPERATURE = os.getenv("LLM_TEMPERATURE", 2)
 MAX_TOKENS = os.getenv("LLM_MAX_TOKENS", 2086)
 

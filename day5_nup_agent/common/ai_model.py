@@ -8,12 +8,15 @@ from langchain_openai import OpenAIEmbeddings
 #     EMBEDDING_MODEL,
 # )
 from common.config import (
+    OPENAI_API_KEY,
     BASE_URL,
-    MODEL
+    OPENAI_MODEL,
+    FURIOSA_MODEL
 )
 
+# furiosa model
 def get_llm_model(
-    model: str = MODEL,
+    model: str = FURIOSA_MODEL,
     temperature: float = 0,
     max_tokens: int = 2048
 ):
@@ -21,8 +24,22 @@ def get_llm_model(
         model=model,
         base_url=BASE_URL,
         temperature=temperature,
-        use_responses_api=False,  # base url로 할 때는 이부분 넣어야 함.(MonoRouter 사용)
+        use_responses_api=False,  # base url로 할 때는 이부분 넣어야 함.
         max_tokens=max_tokens,
+    )
+
+# openai 모델
+def get_openai_model(
+    model: str = OPENAI_MODEL,
+    OPENAI_API_KEY: str = OPENAI_API_KEY,
+    temperature: float = 0,
+    max_tokens: int = 2048
+):
+    return ChatOpenAI(
+        model=model,
+        api_key=OPENAI_API_KEY,
+        temperature=temperature,
+        max_tokens=max_tokens
     )
 
 
