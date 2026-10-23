@@ -20,5 +20,11 @@ uv run python -m ipykernel install --user \
     --display-name "Python (rngd-lab)"
 ```
 
+# 필요한 라이브러리 설치
+```
+uv add langchain langchain_openai tavily
+```
+
+
 - vscode에서 확장프로그램 설치
 ![alt text](images/image.png)
